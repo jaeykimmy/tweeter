@@ -21,6 +21,14 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+body > main {
+  margin: auto;
+  width: 90%;
+  background-color: #f4f1ec;
+  text-align: center;
+
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
