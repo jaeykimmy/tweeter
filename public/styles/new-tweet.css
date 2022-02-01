@@ -1,0 +1,23 @@
+button {
+  font-family: 'Bungee', cursive;
+  background: #4056A1;
+  color: #FFFFFF;
+  border: none;
+}
+
+textarea#tweet-text {
+  color: black; 
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid #545149;
+  width: 100%;
+  font-weight: bold;
+  height: 40px
+}
+
+div.button-counter {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
