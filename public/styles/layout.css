@@ -26,7 +26,14 @@ body {
 */
 main.container {
   margin: auto;
-  width: 90%;
+  width: 100%;
   background-color: #f4f1ec;
   text-align: center; 
+  padding-top: 120px
+}
+
+article.new-tweets-and-tweets {
+  width: 90%;
+  margin: auto;
+  padding-bottom: 16px
 }

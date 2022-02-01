@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  //console.log('callback test');
   $("#tweet-text").on('input', function(event) { //same as on(change)
     // console.log(this); //The this keyword is a reference to the button as a DOM element
     // console.log(event); // the event object that is being triggered
@@ -12,7 +11,7 @@ $(document).ready(function() {
     // } else {
     //   counter.removeClass('max-reached');
     // }
-    
+
     //ternary operator
     //condition ? true : false
     currentLength > maxLength ? counter.addClass('max-reached') : counter.removeClass('max-reached');

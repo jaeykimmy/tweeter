@@ -1,0 +1,47 @@
+.tweets-user-handle {
+  display: flex;
+  justify-content: space-between
+}
+
+.tweets {
+  border: 4px solid #545149;
+  margin-top: 16px;
+}
+.tweets:hover {
+  box-shadow: 10px 5px 5px grey
+}
+
+.tweets-text-box {
+  padding: 16px;
+  margin:auto;
+}
+
+.tweets-user-sent {
+  width: 100%;
+  border-bottom: 4px solid #545149;
+  display: flex;
+  justify-content: start;
+  padding-bottom: 10px
+}
+
+.tweets-date-impressions {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-size:0.6em;
+  align-items:end
+}
+.tweets-impressions {
+  color: #4056A1;
+}
+
+.tweets-impressions i:hover {
+  color: burlywood
+}
+
+.tweets-handle {
+  color: lightblue;
+  font-size: 0.8em;
+  font-weight: bold
+}

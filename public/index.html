@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     
     <!--google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,9 +24,8 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
-    <!-- Char Counter JS -->
+    <!-- Scripts JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     
@@ -42,28 +42,72 @@
       </div>
     </nav>
     
-    <header class = "header">
-      <div class="header-avatar">
-        <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class="header-name">
-        <h2>Your Name</h2>
-      </div>
-    </header>
     
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <header class = "header">
+        <div class="header-avatar">
+          <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div class="header-name">
+          <h2>Your Name</h2>
+        </div>
+      </header>
+
+      <article class="new-tweets-and-tweets">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form class="tweet-text-box" action="/tweets/" method="POST">
+        <form class="new-tweet-text-box" action="/tweets/" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class = 'button-counter'>
+          <div class='button-counter'>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+
+      <section class="tweets">
+        <form class="tweets-text-box">
+          <header class="tweets-user-handle">
+          <span class = "tweets-user">Jurgen Klopp</span>
+          <span class = "tweets-handle">@klopp</span>
+          </header>
+          <div class="tweets-user-made">
+            <p class="tweets-user-sent">Thinking about signing Jonathan David to the team. 1000 RT and ill do it lol</p>
+          </div>
+          <footer class="tweets-date-impressions">
+            <span class="tweets-date">10 days ago</span>
+            <div class="tweets-impressions">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </form>
+      </section>
+
+      <section class="tweets">
+        <form class="tweets-text-box">
+          <header class="tweets-user-handle">
+          <span class = "tweets-user">Jurgen Klopp</span>
+          <span class = "tweets-handle">@klopp</span>
+          </header>
+          <div class="tweets-user-made">
+            <p class="tweets-user-sent">Thinking about signing Jonathan David to the team. 1000 RT and ill do it lol</p>
+          </div>
+          <footer class="tweets-date-impressions">
+            <span class="tweets-date">10 days ago</span>
+            <div class="tweets-impressions">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </form>
+      </section>
+    </article>
+
     </main>
 
   </body>
