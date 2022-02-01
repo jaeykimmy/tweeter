@@ -21,3 +21,6 @@ div.button-counter {
   font-family: 'Bungee', cursive;
 }
 
+.max-reached {
+  color: red;
+}

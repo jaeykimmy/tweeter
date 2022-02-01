@@ -1,4 +1,4 @@
- nav {
+.navbar-top {
   height: 120px;
   padding: 1.5em;
   width: 100%;
@@ -7,19 +7,19 @@
   display: flex;
   justify-content: space-between;
   z-index: 100;
-  }
+}
 
-  nav > span {
-    font-family: 'Bungee', cursive;
-    display: flex;
-    margin-top: 0.5em;
-  }
-  
-.right-section {
+.navbar-top-logo {
+  font-family: 'Bungee', cursive;
+  display: flex;
+  margin-top: 0.5em;
+}
+
+.navbar-top-menu {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.fas {
+.navbar-top-menu i  {
   color: red
 }
