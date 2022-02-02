@@ -8,6 +8,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <!-- Styles CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -55,7 +56,7 @@
         </div>
       </header>
 
-      <article class="new-tweets-and-tweets">
+      <article class="new-tweets-container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form class="new-tweet-text-box" action="/tweets/" method="POST">
@@ -66,15 +67,17 @@
           </div>
         </form>
       </section>
+      </article>
 
-      <section class="tweets">
+      <article class="tweets-container">
+      <!-- <section class="tweets">
         <form class="tweets-text-box">
           <header class="tweets-user-handle">
-          <span class = "tweets-user">Jurgen Klopp</span>
-          <span class = "tweets-handle">@klopp</span>
+          <span class = "tweets-user">Canada Mens National Soccer Team</span>
+          <span class = "tweets-handle">@CMNST</span>
           </header>
           <div class="tweets-user-made">
-            <p class="tweets-user-sent">Thinking about signing Jonathan David to the team. 1000 RT and ill do it lol</p>
+            <p class="tweets-user-sent">We're comin for ya</p>
           </div>
           <footer class="tweets-date-impressions">
             <span class="tweets-date">10 days ago</span>
@@ -105,7 +108,7 @@
             </div>
           </footer>
         </form>
-      </section>
+      </section> -->
     </article>
 
     </main>
