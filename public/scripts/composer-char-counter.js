@@ -6,15 +6,17 @@ $(document).ready(function() {
     const currentLength = $(this).val().length;
     const counter = $(this).parent().find('.counter');
 
-    // if (currentLength > maxLength) {
-    //   counter.addClass('max-reached');
-    // } else {
-    //   counter.removeClass('max-reached');
-    // }
+    if (currentLength > maxLength) {
+      alert('max reached');
+      counter.addClass('max-reached');
+    } else {
+      counter.removeClass('max-reached');
+    }
 
+    
     //ternary operator
     //condition ? true : false
-    currentLength > maxLength ? counter.addClass('max-reached') : counter.removeClass('max-reached');
+    //currentLength > maxLength ? counter.addClass('max-reached') : counter.removeClass('max-reached');
 
     counter.text(maxLength - currentLength);
   });

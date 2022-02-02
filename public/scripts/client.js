@@ -60,9 +60,15 @@ $(document).ready(() => {
   $('.new-tweet-text-box').submit(function(event) {
     event.preventDefault();
     //serialize the form into a query string
-    console.log($(this).serialize());
+    //console.log($(this).serialize());
     //Use the jQuery library to submit a POST request that sends the serialized data to the server
-    $.post("/tweets", $(this).serialize());
+    const currentLength = $('#tweet-text').val().length;
+    if (currentLength <= 140) {
+      $.post("/tweets", $(this).serialize());
+    }
+    if (currentLength === 0) {
+      alert("enter something");
+    }
   });
 
   //define a loadTweets function to fetch tweets from http://localhost:8080/tweets
