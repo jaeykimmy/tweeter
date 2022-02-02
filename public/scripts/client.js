@@ -15,32 +15,6 @@
 //   "created_at": timeago.format(1461116232227)
 // };
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": timeago.format(1461116232227)
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": timeago.format(1461113959088)
-  }
-];
-
 $(document).ready(() => {
   const createTweetElement = (tweet) => {
     const $tweet = `<section class="tweets">
@@ -73,14 +47,14 @@ $(document).ready(() => {
 
   //for multiple tweets
   const renderTweets = function(tweetsArr) {
-  // loops through tweets
+    // loops through tweets
     for (let tweet of tweetsArr) {
       // calls createTweetElement for each tweet
       // takes return value and appends it to the tweets container
       $('.tweets-container').append(createTweetElement(tweet));
     }
   };
-  renderTweets(data);
+  //renderTweets(data);
 
   //Add an Event Listener and Prevent the Default Behaviour
   $('.new-tweet-text-box').submit(function(event) {
@@ -88,9 +62,18 @@ $(document).ready(() => {
     //serialize the form into a query string
     console.log($(this).serialize());
     //Use the jQuery library to submit a POST request that sends the serialized data to the server
-    $.post("/post", $(this).serialize());
+    $.post("/tweets", $(this).serialize());
   });
 
+  //define a loadTweets function to fetch tweets from http://localhost:8080/tweets
+  // const loadTweets = $(function() {
+  //   $.ajax('http://localhost:8080/tweets', { method: 'GET' });
+  // });
+  // console.log(loadTweets);
+  // renderTweets(loadTweets);
 
+  $.get('http://localhost:8080/tweets').then((loadTweets) => {
+    renderTweets(loadTweets);
+  });
 
 });
