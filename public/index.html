@@ -4,6 +4,9 @@
     
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+
+    <!-- Disabling Viewport Zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -58,17 +61,17 @@
 
       <article class="new-tweets-container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-
+        
         <section hidden class='alert-long'>
           <span class="alert-message">thats too many words man</span>
         </section>
-
+        
         <section hidden class='alert-short'>
           <span class="alert-message">thats not enough words man</span>
         </section>
-
-        <form class="new-tweet-text-box" action="/tweets/" method="POST">
+        
+        <form hidden class="new-tweet-text-box" action="/tweets/" method="POST">
+          <h2>Compose Tweet</h2>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class='button-counter'>
             <button type="submit">Tweet</button>

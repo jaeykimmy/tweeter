@@ -4,7 +4,7 @@
 }
 
 .tweets {
-  border: 4px solid #545149;
+  border: 0.2em solid #545149;
   margin-top: 16px;
 }
 .tweets:hover {
@@ -14,8 +14,8 @@
   display: flex;
 }
 .tweets-avatar {
-  height: 36px;
-  padding-right: 4px
+  height: 1.5em;
+  padding-right: 0.2em
 }
 .tweets-user {
   color: darkblue;
@@ -40,7 +40,7 @@
 
 .tweets-user-sent {
   width: 100%;
-  border-bottom: 4px solid #545149;
+  border-bottom: 0.2em solid #545149;
   display: flex;
   justify-content: start;
   padding-bottom: 16px;

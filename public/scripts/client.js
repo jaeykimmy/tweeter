@@ -77,6 +77,7 @@ $(document).ready(() => {
     //console.log($(this).serialize());
     //Use the jQuery library to submit a POST request that sends the serialized data to the server
     const currentLength = $('#tweet-text').val().length;
+    console.log(currentLength);
     if (currentLength <= 140) {
       $.ajax({
         url: "/tweets",
@@ -85,13 +86,13 @@ $(document).ready(() => {
         success: function() {
           $('#tweet-text').val('');
           loadTweets();
+          //reset counter after posting tweet
+          $('#tweet-text').parent().find('.counter').val(140);
         }
       });
     }
     if (currentLength === 0) {
       $(".alert-short").slideDown();
-    } else {
-      $(".alert-short").hide();
     }
   });
   
