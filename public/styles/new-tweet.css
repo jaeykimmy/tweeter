@@ -4,7 +4,6 @@
   color: #FFFFFF;
   border: none;
 }
-
 #tweet-text {
   color: black; 
   background: transparent;
@@ -14,29 +13,9 @@
   font-weight: bold;
   height: 3em
 }
-
 .button-counter {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
 }
 
-.max-reached {
-  color: red;
-}
-
-.alert-long {
-  border: 4px solid red;
-  padding: 4px;
-  margin-bottom: 8px
-}
-.alert-short {
-  border: 4px solid red;
-  padding: 4px;
-  margin-bottom: 8px;
-}
-.alert-message {
-  font-size: 16px;
-  color: red;
-  font-weight: bold
-}

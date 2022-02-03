@@ -3,18 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const tweetData = {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//     "handle": "@SirIsaac"
-//   },
-//   "content": {
-//     "text": "If I have seen further it is by standing on the shoulders of giants"
-//   },
-//   "created_at": timeago.format(1461116232227)
-// };
-
 $(document).ready(() => {
 
   const escape = function(str) {
@@ -22,7 +10,7 @@ $(document).ready(() => {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  
+  //for single tweet rendering
   const createTweetElement = (tweet) => {
     const $tweet =
     `<section class="tweets">
@@ -51,38 +39,31 @@ $(document).ready(() => {
     </section>`;
     return $tweet;
   };
-  
-  // const $tweet = createTweetElement(tweetData);
-  
-  // Test / driver code (temporary)
-  //console.log($tweet); // to see what it looks like
-  // $('.tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
   //for multiple tweets
   const renderTweets = function(tweetsArr) {
-    // loops through tweets
     $('.tweets-container').empty();
+    // loops through tweets
     for (let tweet of tweetsArr) {
       // calls createTweetElement for each tweet
-      // takes return value and appends it to the tweets container
+      // takes return value and prepends it to the tweets container
       $('.tweets-container').prepend(createTweetElement(tweet));
     }
   };
-  //renderTweets(data);
 
   //Add an Event Listener and Prevent the Default Behaviour
   $('.new-tweet-text-box').submit(function(event) {
     event.preventDefault();
-    //serialize the form into a query string
-    //console.log($(this).serialize());
-    //Use the jQuery library to submit a POST request that sends the serialized data to the server
     const currentLength = $('#tweet-text').val().length;
     console.log(currentLength);
     if (currentLength <= 140) {
       $.ajax({
         url: "/tweets",
+        //serialize the form into a query string
         data: $(this).serialize(),
+        //Use the jQuery library to submit a POST request that sends the serialized data to the server
         method: 'post',
+        //Upon success, have the post load immediately without refreshing the page
         success: function() {
           $('#tweet-text').val('');
           loadTweets();
