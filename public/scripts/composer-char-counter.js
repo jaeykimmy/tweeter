@@ -11,8 +11,8 @@ $(document).ready(function() {
       $(".alert-long").slideDown();
     } else {
       counter.removeClass('max-reached');
-      $(".alert-long").hide();
-      $(".alert-short").hide();
+      $(".alert-long").slideUp();
+      $(".alert-short").slideUp();
     }
     
     

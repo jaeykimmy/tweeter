@@ -32,6 +32,7 @@ main.container {
   padding-top: 120px
 }
 
+
 /*tablet and phone style*/
 @media only screen and (min-width: 360px) {
   nav.navbar-top {

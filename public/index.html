@@ -63,18 +63,18 @@
       <section class="new-tweet">
         
         <section hidden class='alert-long'>
-          <span class="alert-message">thats too many words man</span>
+          <span class="alert-message"><i class="fas fa-warning"></i>  you're saying too much, under 140 characters please  <i class="fas fa-warning"></i></span>
         </section>
         
         <section hidden class='alert-short'>
-          <span class="alert-message">thats not enough words man</span>
+          <span class="alert-message"><i class="fas fa-warning"></i>  you gotta say something first to tweet it  <i class="fas fa-warning"></i></span>
         </section>
         
         <form hidden class="new-tweet-text-box" action="/tweets/" method="POST">
           <h2>Compose Tweet</h2>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class='button-counter'>
-            <button type="submit">Tweet</button>
+            <button class="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
@@ -122,7 +122,6 @@
         </form>
       </section> -->
     </article>
-
     </main>
 
   </body>
