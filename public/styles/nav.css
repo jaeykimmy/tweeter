@@ -39,18 +39,3 @@
     top: 0;
   }
 }
-
-/* i.fas.fa-angle-double-down {
-   animation: wiggle 1s 1s ease-in-out infinite;
-}
-@keyframes wiggle {
-  0% {
-    top: 0;
-  }
-  50% {
-    top: -10px;
-  }
-  100% {
-    top: 0;
-  }
-} */

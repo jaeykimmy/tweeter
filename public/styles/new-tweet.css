@@ -5,17 +5,17 @@
   border: none;
 }
 
-textarea#tweet-text {
+#tweet-text {
   color: black; 
   background: transparent;
   border: none;
   border-bottom: 4px solid #545149;
   width: 100%;
   font-weight: bold;
-  height: 2.75em
+  height: 3em
 }
 
-div.button-counter {
+.button-counter {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
