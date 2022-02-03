@@ -16,18 +16,25 @@
 // };
 
 $(document).ready(() => {
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const createTweetElement = (tweet) => {
     const $tweet = `<section class="tweets">
     <form class="tweets-text-box">
     <header class="tweets-user-handle">
-    <span class = "tweets-user">${tweet.user.name}</span>
-    <span class = "tweets-handle">${tweet.user.handle}</span>
+    <span class = "tweets-user">${escape(tweet.user.name)}</span>
+    <span class = "tweets-handle">${escape(tweet.user.handle)}</span>
     </header>
     <div class="tweets-user-made">
-    <p class="tweets-user-sent">${tweet.content.text}</p>
+    <p class="tweets-user-sent">${escape(tweet.content.text)}</p>
     </div>
     <footer class="tweets-date-impressions">
-    <span class="tweets-date">${tweet.created_at}</span>
+    <span class="tweets-date">${escape(tweet.created_at)}</span>
     <div class="tweets-impressions">
     <i class="fa-solid fa-flag"></i>
     <i class="fa-solid fa-retweet"></i>
@@ -48,10 +55,11 @@ $(document).ready(() => {
   //for multiple tweets
   const renderTweets = function(tweetsArr) {
     // loops through tweets
+    $('.tweets-container').empty();
     for (let tweet of tweetsArr) {
       // calls createTweetElement for each tweet
       // takes return value and appends it to the tweets container
-      $('.tweets-container').append(createTweetElement(tweet));
+      $('.tweets-container').prepend(createTweetElement(tweet));
     }
   };
   //renderTweets(data);
@@ -64,22 +72,32 @@ $(document).ready(() => {
     //Use the jQuery library to submit a POST request that sends the serialized data to the server
     const currentLength = $('#tweet-text').val().length;
     if (currentLength <= 140) {
-      $.post("/tweets", $(this).serialize());
+      $.ajax({
+        url: "/tweets",
+        data: $(this).serialize(),
+        method: 'post',
+        success: function() {
+          $('#tweet-text').val('');
+          loadTweets();
+        }
+      });
+    }
+    if (currentLength > 140) {
+      alert("shorten ur tweet");
     }
     if (currentLength === 0) {
       alert("enter something");
     }
   });
-
+  
   //define a loadTweets function to fetch tweets from http://localhost:8080/tweets
-  // const loadTweets = $(function() {
-  //   $.ajax('http://localhost:8080/tweets', { method: 'GET' });
-  // });
-  // console.log(loadTweets);
-  // renderTweets(loadTweets);
-
-  $.get('http://localhost:8080/tweets').then((loadTweets) => {
-    renderTweets(loadTweets);
-  });
-
+  const loadTweets = () => {
+    $.get('/tweets').then((tweets) => {
+      renderTweets(tweets);
+    });
+  };
+  loadTweets();
+  
+  
 });
+

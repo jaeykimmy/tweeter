@@ -7,7 +7,6 @@ $(document).ready(function() {
     const counter = $(this).parent().find('.counter');
 
     if (currentLength > maxLength) {
-      alert('max reached');
       counter.addClass('max-reached');
     } else {
       counter.removeClass('max-reached');
