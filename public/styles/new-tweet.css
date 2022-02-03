@@ -24,3 +24,19 @@ div.button-counter {
 .max-reached {
   color: red;
 }
+
+.alert-long {
+  border: 2px solid red;
+  padding: 4px;
+  margin-bottom: 8px
+}
+.alert-short {
+  border: 2px solid red;
+  padding: 4px;
+  margin-bottom: 8px
+}
+.alert-message {
+  font-size: 16px;
+  color: red;
+  font-weight: bold
+}

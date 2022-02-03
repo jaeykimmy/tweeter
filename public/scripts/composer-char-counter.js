@@ -8,8 +8,10 @@ $(document).ready(function() {
 
     if (currentLength > maxLength) {
       counter.addClass('max-reached');
+      $(".alert-long").slideDown();
     } else {
       counter.removeClass('max-reached');
+      $(".alert-long").hide();
     }
 
     

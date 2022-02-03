@@ -24,17 +24,23 @@ $(document).ready(() => {
   };
   
   const createTweetElement = (tweet) => {
-    const $tweet = `<section class="tweets">
+    const $tweet =
+    `<section class="tweets">
     <form class="tweets-text-box">
     <header class="tweets-user-handle">
+    <div class="tweets-avatar-user">
+    <img class="tweets-avatar" src = "${escape(tweet.user.avatars)}">
     <span class = "tweets-user">${escape(tweet.user.name)}</span>
+    </div>
     <span class = "tweets-handle">${escape(tweet.user.handle)}</span>
     </header>
+
     <div class="tweets-user-made">
     <p class="tweets-user-sent">${escape(tweet.content.text)}</p>
     </div>
+
     <footer class="tweets-date-impressions">
-    <span class="tweets-date">${escape(tweet.created_at)}</span>
+    <span class="tweets-date">${escape(timeago.format(tweet.created_at))}</span>
     <div class="tweets-impressions">
     <i class="fa-solid fa-flag"></i>
     <i class="fa-solid fa-retweet"></i>
@@ -82,11 +88,10 @@ $(document).ready(() => {
         }
       });
     }
-    if (currentLength > 140) {
-      alert("shorten ur tweet");
-    }
     if (currentLength === 0) {
-      alert("enter something");
+      $(".alert-short").slideDown();
+    } else {
+      $(".alert-short").hide();
     }
   });
   

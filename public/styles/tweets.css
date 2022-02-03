@@ -10,7 +10,13 @@
 .tweets:hover {
   box-shadow: 10px 5px 5px grey
 }
-
+.tweets-avatar-user {
+  display: flex;
+}
+.tweets-avatar {
+  height: 36px;
+  padding-right: 4px
+}
 .tweets-user {
   color: darkblue;
   font-size: 0.8em;

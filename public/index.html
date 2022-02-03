@@ -59,6 +59,15 @@
       <article class="new-tweets-container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+
+        <section hidden class='alert-long'>
+          <span class="alert-message">thats too many words man</span>
+        </section>
+
+        <section hidden class='alert-short'>
+          <span class="alert-message">thats not enough words man</span>
+        </section>
+
         <form class="new-tweet-text-box" action="/tweets/" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class='button-counter'>
