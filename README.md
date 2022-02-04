@@ -24,5 +24,5 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screenshots
 
 !["Screenshot of homepage"](https://github.com/jaeykimmy/tweeter/blob/master/docs/tweet-homepage.png)
-!["Screenshot of revealed textbox"](tweet-text-box.png)
+!["Screenshot of revealed textbox"](https://github.com/jaeykimmy/tweeter/blob/master/docs/tweet-text-box.png)
 !["Screenshot of mobile mode"](https://github.com/jaeykimmy/tweeter/blob/master/docs/tweet-tablet-mode.png)
